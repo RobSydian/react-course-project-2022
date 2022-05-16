@@ -4,12 +4,12 @@ import StyledHeader from "../styles/StyledHeader";
 import mealsImage from "../../assets/meals.jpeg";
 import HeaderCartButton from "./HeaderCartButton";
 
-export default function Header(props) {
+export default function Header({ onShowCart, onHideCart }) {
   return (
     <StyledHeader>
       <header className="header">
         <h1>React Meals</h1>
-        <HeaderCartButton />
+        <HeaderCartButton onClick={onShowCart} />
       </header>
       <div className="main-image">
         <img src={mealsImage} alt="A table full of delicious food" />
