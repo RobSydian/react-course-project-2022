@@ -7,7 +7,13 @@ export default function Card({ dummyMeals }) {
     <StyledCard>
       <ul>
         {dummyMeals.map((meal) => (
-          <MealItem key={meal.id} id={meal.id} mealItem={meal} />
+          <MealItem
+            key={meal.id}
+            id={meal.id}
+            mealItem={meal}
+            name={meal.name}
+            itemPrice={meal.price}
+          />
         ))}
       </ul>
     </StyledCard>

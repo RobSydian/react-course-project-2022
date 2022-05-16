@@ -1,13 +1,15 @@
 import React from "react";
 import StyledInput from "../styles/StyledInput";
 
-export default function Input({ label, input }) {
+const Input = React.forwardRef(({ label, input }, ref) => {
   return (
     <StyledInput>
       <div className="input">
         <label htmlFor={input.id}>{label}</label>
-        <input {...input} />
+        <input {...input} ref={ref} />
       </div>
     </StyledInput>
   );
-}
+});
+
+export default Input;
