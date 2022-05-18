@@ -10,7 +10,6 @@ export default function MealItemForm({ id, onAddToCart }) {
     event.preventDefault();
 
     const enteredAmount = amountInputRef.current.value;
-    console.log("entered amount", enteredAmount);
     const enteredAmountNumber = +enteredAmount;
 
     if (
