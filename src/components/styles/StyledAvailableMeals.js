@@ -14,6 +14,16 @@ const StyledAvailableMeals = styled.div`
     padding: 0;
   }
 
+  .mealsLoading {
+    text-align: center;
+    color: white;
+  }
+
+  .mealsError {
+    text-align: center;
+    color: red;
+  }
+
   @keyframes meals-appear {
     from {
       opacity: 0;
