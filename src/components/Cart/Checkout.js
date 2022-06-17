@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import StyledCheckout from "../styles/StyledCheckout";
 
-function Checkout({ onCancel }) {
+function Checkout({ onCancel, onConfirm }) {
   const [formInputsValidity, setFormInputsValidity] = useState({
     name: true,
     street: true,
@@ -46,6 +46,13 @@ function Checkout({ onCancel }) {
     if (!formIsValid) {
       return;
     }
+
+    onConfirm({
+      name: enteredName,
+      street: enteredStreet,
+      city: enteredCity,
+      postalCode: enteredPostalCode,
+    });
   };
   return (
     <StyledCheckout>
